@@ -5,6 +5,7 @@ import com.jacob.ddd.gatewayimpl.database.dataobject.MetricDO;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
 /**
  * MybatisTest
@@ -27,12 +28,12 @@ public class MybatisTest {
         Mybatis3Utils.closeCurrentSession();
     }
 
-    //@Test
+    @Test
     public void insert() {
         MetricDO metricDO = new MetricDO();
         metricDO.setMainMetric("mainTest");
         metricDO.setSubMetric("subTest");
-        metricDO.setUserId("12345");
+        metricDO.setUserId("jacob");
         metricDO.setCreator("Frank");
         metricDO.setModifier("Frank");
         metricDO.setMetricItem("{\"patentName\": \"Leads重构\", \"level\": \"PROJECT\"}");
